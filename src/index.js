@@ -1,36 +1,46 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+// CSS
 import "./index.css";
+
+// setup vars
+const books = [
+  {
+    id: 1,
+    img: "./images/rose.png",
+    title: "I love you to the moon an back",
+    author: "Amelia Hepworth",
+  },
+  {
+    id: 2,
+    img: "./images/pexels-kyle-roxas-2138922.png",
+    title: "Our class is a family",
+    author: "Shannon Olsen",
+  },
+];
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function BookList() {
   return (
-    <div>
-      <Book />
-    </div>
+    <section className="booklist">
+      {books.map((book) => {
+        return <Book key={book.id} {...book}></Book>;
+      })}
+    </section>
   );
 }
 
-const Book = () => {
+const Book = (props) => {
+  const { img, title, author } = props;
   return (
-    <div>
-      <Image />
-      <Title />
-      <Author />
-    </div>
+    <article className="book">
+      <img src={img} alt="" className="image" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
   );
-};
-
-const Image = () => {
-  return <img src="./images/rose.png" alt="" className="image" />;
-};
-
-const Title = () => {
-  return <h2>I love you to the moon an back</h2>;
-};
-const Author = () => {
-  return <h4>Amelia Hepworth</h4>;
 };
 
 root.render(<BookList />);
