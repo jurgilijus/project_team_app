@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f1f5f8;
+    color: black;
+}
+
+.booklist {
+    width: 90vw;
+    max-width: 1170vw;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .booklist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.book {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.book h2 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.book h4 {
+    color: gray;
+    font-size: 0.75rem;
+}
+
+img {
+    width: 20vw;
+    border-radius: 0.5rem;
+}

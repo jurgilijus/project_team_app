@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Home",
+        "icon": "bi-house-fill",
+        "path":"/"
+    },
+    {"title": "Projects",
+        "icon": "bi bi-list-task",
+        "childrens": [
+            {
+                "title": "Book shop",
+                "icon": "bi bi-cart-fill",
+                "path": "./bookshop"
+            }
+        ]}
+    
+]
