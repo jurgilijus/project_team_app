@@ -27,7 +27,7 @@ function Sidebar({ children }) {
           </NavLink>
         ))}
       </div>
-      <main>{children}</main>
+      <main className="main_content">{children}</main>
     </div>
   );
 }
