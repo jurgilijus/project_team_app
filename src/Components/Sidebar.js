@@ -27,7 +27,7 @@ function Sidebar({ children }) {
           </NavLink>
         ))}
       </div>
-      <main className="main_content">{children}</main>
+      <main className="main_content main_background_color">{children}</main>
     </div>
   );
 }
