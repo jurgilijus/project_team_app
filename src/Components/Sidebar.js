@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHome, FaShoppingCart } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 const menuItem = [
   {
     path: "/home",
@@ -18,7 +19,9 @@ function Sidebar({ children }) {
     <div className="conteiner">
       <div className="sidebar">
         <div className="top_section">
-          <h1 className="logo">Menu</h1>
+          <Link to="/home">
+            <h1 className="logo">Menu</h1>
+          </Link>
         </div>
         {menuItem.map((item, index) => (
           <NavLink to={item.path} key={index} className="link">
