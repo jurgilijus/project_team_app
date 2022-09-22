@@ -1,19 +1,7 @@
 import React from "react";
-import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
+import { menuItem } from "./menuItem";
 
-const menuItem = [
-  {
-    path: "",
-    name: "Home",
-    icon: <FaHome />,
-  },
-  {
-    path: "/bookshop",
-    name: "Bookshop",
-    icon: <FaShoppingCart />,
-  },
-];
 function Sidebar({ children }) {
   return (
     <div className="conteiner">
