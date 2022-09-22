@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const menuItem = [
   {
-    path: "/home",
+    path: "",
     name: "Home",
     icon: <FaHome />,
   },
@@ -19,12 +19,12 @@ function Sidebar({ children }) {
     <div className="conteiner">
       <div className="sidebar">
         <div className="top_section">
-          <Link to="/home">
+          <Link to="">
             <h1 className="logo">Menu</h1>
           </Link>
         </div>
         {menuItem.map((item, index) => (
-          <NavLink to={item.path} key={index} className="link">
+          <NavLink to={item.path} key={index} className="link" end>
             <div className="icon">{item.icon}</div>
             <div className="link_text">{item.name}</div>
           </NavLink>
